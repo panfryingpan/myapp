@@ -1,0 +1,55 @@
+@import "../../styles/index.scss";
+
+.training-menu {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 2;
+  .menu__header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+  }
+  .training-menu__buttons {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+    .scoreboard {
+      margin: 20px auto;
+    }
+    .training-end,
+    .scoreboard {
+      width: 90%;
+      padding-bottom: 5px;
+    }
+    .training-end {
+      margin: 0 auto;
+    }
+    .routes-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .routes {
+        div {
+          font-size: 18px;
+          display: inline-block;
+          margin-left: 5px;
+          color: $background;
+        }
+      }
+      .routes-boulders,
+      .routes-inside {
+        font-size: 14px;
+        margin-top: 5px;
+        padding: 5px;
+        width: "50%";
+      }
+      .routes-inside {
+        margin-top: 10px;
+      }
+    }
+  }
+}

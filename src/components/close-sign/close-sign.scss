@@ -1,0 +1,11 @@
+@import "../../styles/index.scss";
+.closeSign {
+  color: $details_green;
+  font-size: 30px;
+  @include tablet {
+    font-size: 40px;
+  }
+  @include desktop {
+    display: none;
+  }
+}
