@@ -70,7 +70,7 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
       <div className="training-menu__buttons">
         <div className="routes-wrapper">
           <div className="routes" onClick={handleClickRoutes}>
-            Trasy
+            Drogi
             <div>
               <FontAwesomeIcon icon={faSortUp} style={ArrowStyles} />
             </div>

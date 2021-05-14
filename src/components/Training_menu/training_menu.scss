@@ -1,12 +1,12 @@
 @import "../../styles/index.scss";
 
 .training-menu {
-  position: fixed;
+  position: relative;
   background-color: white;
   height: 100vh;
   overflow: hidden;
   white-space: nowrap;
-  z-index: 2;
+  z-index: 1;
   .menu__header-wrapper {
     display: flex;
     align-items: center;

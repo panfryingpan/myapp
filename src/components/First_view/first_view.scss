@@ -1,0 +1,43 @@
+@import "../../styles/index.scss";
+
+.first-view__wrapper {
+  width: 80%;
+  height: 80%;
+  background-color: $details_purple;
+  margin: 20% auto;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  h1 {
+    font-weight: 500;
+  }
+  p {
+    font-weight: 400;
+    margin: 30px 0;
+    width: 95%;
+  }
+  .button__wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 40px;
+    div {
+      padding: 10px 20px;
+      background-color: $details_green;
+      border-radius: 5px;
+      cursor: pointer;
+      color: whitesmoke;
+    }
+  }
+  .undoButton {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    div {
+      margin-left: 10px;
+    }
+  }
+}
