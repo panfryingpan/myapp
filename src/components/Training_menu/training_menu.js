@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import { Logo } from "../Logo/logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
-
+import SignOutButton from "../SignOut/sign_out";
 export const TrainingMenu = ({ onClick, menuIsActive }) => {
   const [routesActive, setRoutesIsActive] = useState(false);
   const [elements, elementActive] = useState({
     boulders: false,
     inside: false,
-    scoreBoard: false,
+    favorites: false,
     endDay: false,
   });
 
@@ -31,7 +31,7 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
       elementActive({
         boulders: true,
         inside: false,
-        scoreBoard: false,
+        favorites: false,
         endDay: false,
       });
     }
@@ -39,15 +39,15 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
       elementActive({
         boulders: false,
         inside: true,
-        scoreBoard: false,
+        favorites: false,
         endDay: false,
       });
     }
-    if (el === "scoreBoard") {
+    if (el === "favorites") {
       elementActive({
         boulders: false,
         inside: false,
-        scoreBoard: true,
+        favorites: true,
         endDay: false,
       });
     }
@@ -56,7 +56,7 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
       elementActive({
         boulders: false,
         inside: false,
-        scoreBoard: false,
+        favorites: false,
         endDay: true,
       });
     }
@@ -101,15 +101,15 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
           </div>
         </div>
         <div
-          className="scoreboard"
+          className="favorites"
           onClick={() => {
-            handleClickedElement("scoreBoard");
+            handleClickedElement("favorites");
           }}
           style={{
-            borderBottom: elements.scoreBoard ? "2px solid #40b3a2" : null,
+            borderBottom: elements.favorites ? "2px solid #40b3a2" : null,
           }}
         >
-          Scoreboard
+          Ulubione
         </div>
         <div
           className="training-end"
@@ -122,6 +122,9 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
         >
           Koniec dnia
         </div>
+      </div>
+      <div className="account-buttons">
+        <SignOutButton />
       </div>
     </div>
   );

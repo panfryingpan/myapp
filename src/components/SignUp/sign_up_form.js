@@ -35,7 +35,7 @@ const SignUpFormBase = (props) => {
           value={username}
           onChange={(event) => setUsername(event.target.value)}
           type="text"
-          placeholder="Full Name"
+          placeholder="Twoje imię"
         />
       </label>
       <label>
@@ -45,7 +45,7 @@ const SignUpFormBase = (props) => {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           type="text"
-          placeholder="Email Address"
+          placeholder="Email"
         />
       </label>
       <label>
@@ -55,7 +55,7 @@ const SignUpFormBase = (props) => {
           value={passwordOne}
           onChange={(event) => setPasswordOne(event.target.value)}
           type="password"
-          placeholder="Password"
+          placeholder="Hasło"
         />
       </label>
       <label>
@@ -65,13 +65,10 @@ const SignUpFormBase = (props) => {
           value={passwordTwo}
           onChange={(event) => setPasswordTwo(event.target.value)}
           type="password"
-          placeholder="Confirm Password"
+          placeholder="Powtórz hasło"
         />
       </label>
-      <button
-        // disabled={isInvalid}
-        type="submit"
-      >
+      <button disabled={isInvalid} type="submit">
         Zarejestruj !
       </button>
 

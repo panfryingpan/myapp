@@ -13,3 +13,43 @@
     @content;
   }
 }
+
+@mixin formStyles {
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+    label {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+    }
+    button {
+      margin: 20px auto;
+      background-color: $details_green;
+      padding: 15px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin buttonStyles {
+  width: 50%;
+  margin: 20px auto;
+  background-color: $details_green;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

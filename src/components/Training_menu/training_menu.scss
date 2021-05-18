@@ -1,7 +1,7 @@
 @import "../../styles/index.scss";
 
 .training-menu {
-  position: relative;
+  position: fixed;
   background-color: white;
   height: 100vh;
   overflow: hidden;
@@ -17,11 +17,11 @@
     text-align: center;
     font-size: 18px;
     padding-top: 20px;
-    .scoreboard {
+    .favorites {
       margin: 20px auto;
     }
     .training-end,
-    .scoreboard {
+    .favorites {
       width: 90%;
       padding-bottom: 5px;
     }
@@ -50,6 +50,21 @@
       .routes-inside {
         margin-top: 10px;
       }
+    }
+  }
+  .account-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    button {
+      width: 80%;
+      margin: 20px auto;
+      background-color: $details_green;
+      padding: 10px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   }
 }

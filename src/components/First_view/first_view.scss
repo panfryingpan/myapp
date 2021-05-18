@@ -4,17 +4,27 @@
   width: 80%;
   height: 80%;
   background-color: $details_purple;
-  margin: 70px auto 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  display: flex;
+  flex-grow: 0;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+
   color: white;
   position: relative;
-
+  @include desktop {
+    width: 40%;
+  }
   h1 {
     font-weight: 500;
   }
   p {
     font-weight: 400;
-    margin: 30px 0;
+
     width: 95%;
   }
   .button__wrapper {
@@ -22,12 +32,20 @@
     margin: 0 auto;
     justify-content: space-around;
     margin-top: 40px;
+    flex-wrap: wrap;
+    @include desktop {
+      margin-top: 100px;
+    }
     div {
       padding: 10px 20px;
       background-color: $details_green;
       border-radius: 5px;
       cursor: pointer;
       color: whitesmoke;
+      margin: 10px;
+      @include desktop {
+        width: 50%;
+      }
     }
   }
   .undoButton {
@@ -36,6 +54,7 @@
     top: 20px;
     left: 20px;
     font-size: 18px;
+    cursor: pointer;
     div {
       margin-left: 10px;
     }
