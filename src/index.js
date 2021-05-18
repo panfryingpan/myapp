@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./styles/index.scss";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
+import Firebase, { FirebaseContext } from "./utils/Firebase";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseContext.Provider value={new Firebase()}>
+      <App />
+    </FirebaseContext.Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

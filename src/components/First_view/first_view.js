@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./first_view.scss";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
+import SignUpFormBase from "../SignUp/sign_up_form";
 
 export const FirstView = () => {
   const [userRegisterWindow, setUserRegisterWindow] = useState(false);
@@ -59,6 +60,7 @@ export const FirstView = () => {
           <FontAwesomeIcon icon={faUndo} />
           <div>Wróć</div>
         </div>
+        <SignUpFormBase />
       </div>
     );
   }
