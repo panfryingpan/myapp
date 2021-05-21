@@ -2,11 +2,18 @@
 
 .training-menu {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   height: 100vh;
   overflow: hidden;
   white-space: nowrap;
   z-index: 1;
+
+  @include desktop {
+    position: relative;
+    width: 18%;
+  }
   .menu__header-wrapper {
     display: flex;
     align-items: center;
@@ -17,21 +24,12 @@
     text-align: center;
     font-size: 18px;
     padding-top: 20px;
-    .favorites {
-      margin: 20px auto;
-    }
-    .training-end,
-    .favorites {
-      width: 90%;
-      padding-bottom: 5px;
-    }
-    .training-end {
-      margin: 0 auto;
-    }
+    margin-top: 100px;
     .routes-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
+      cursor: pointer;
       .routes {
         div {
           font-size: 18px;
@@ -53,10 +51,14 @@
     }
   }
   .account-buttons {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 50vh;
+    justify-self: flex-end;
+    height: 100%;
     button {
+      position: relative;
       width: 80%;
       margin: 20px auto;
       background-color: $details_green;

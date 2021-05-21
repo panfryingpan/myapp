@@ -1,5 +1,6 @@
 import app from "firebase/app";
 import "firebase/auth";
+import "firebase/database";
 
 const {
   REACT_APP_API_KEY,
@@ -26,6 +27,7 @@ class Firebase {
   constructor() {
     app.initializeApp(config);
     this.auth = app.auth();
+    this.db = app.database();
   }
   //    APP AUTH
   doCreateUserWithEmailAndPassword = (email, password) =>

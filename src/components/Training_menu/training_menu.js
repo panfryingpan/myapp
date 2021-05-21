@@ -5,14 +5,13 @@ import { Logo } from "../Logo/logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
 import SignOutButton from "../SignOut/sign_out";
-export const TrainingMenu = ({ onClick, menuIsActive }) => {
+export const TrainingMenu = ({
+  onClick,
+  menuIsActive,
+  elements,
+  handleClickedElement,
+}) => {
   const [routesActive, setRoutesIsActive] = useState(false);
-  const [elements, elementActive] = useState({
-    boulders: false,
-    inside: false,
-    favorites: false,
-    endDay: false,
-  });
 
   const ArrowStyles = {
     transform: `rotate(${routesActive ? 180 : 90}deg)`,
@@ -26,41 +25,7 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
   const handleClickRoutes = () => {
     routesActive ? setRoutesIsActive(false) : setRoutesIsActive(true);
   };
-  const handleClickedElement = (el) => {
-    if (el === "boulders") {
-      elementActive({
-        boulders: true,
-        inside: false,
-        favorites: false,
-        endDay: false,
-      });
-    }
-    if (el === "inside") {
-      elementActive({
-        boulders: false,
-        inside: true,
-        favorites: false,
-        endDay: false,
-      });
-    }
-    if (el === "favorites") {
-      elementActive({
-        boulders: false,
-        inside: false,
-        favorites: true,
-        endDay: false,
-      });
-    }
 
-    if (el === "endDay") {
-      elementActive({
-        boulders: false,
-        inside: false,
-        favorites: false,
-        endDay: true,
-      });
-    }
-  };
   return (
     <div className="training-menu" style={trainingMenuStyles}>
       <div className="menu__header-wrapper">
@@ -78,49 +43,27 @@ export const TrainingMenu = ({ onClick, menuIsActive }) => {
           <div
             className="routes-boulders"
             onClick={() => {
-              handleClickedElement("boulders");
+              handleClickedElement("addRoute");
             }}
             style={{
-              borderBottom: elements.boulders ? "2px solid #40b3a2" : null,
+              borderBottom: elements.addRoute ? "2px solid #40b3a2" : null,
               display: `${routesActive ? "block" : "none"}`,
             }}
           >
-            Skałki
+            Dodaj drogę
           </div>
           <div
             className="routes-inside"
             onClick={() => {
-              handleClickedElement("inside");
+              handleClickedElement("yourRoutes");
             }}
             style={{
-              borderBottom: elements.inside ? "2px solid #40b3a2" : null,
+              borderBottom: elements.yourRoutes ? "2px solid #40b3a2" : null,
               display: `${routesActive ? "block" : "none"}`,
             }}
           >
-            Ścianki
+            Twoje drogi
           </div>
-        </div>
-        <div
-          className="favorites"
-          onClick={() => {
-            handleClickedElement("favorites");
-          }}
-          style={{
-            borderBottom: elements.favorites ? "2px solid #40b3a2" : null,
-          }}
-        >
-          Ulubione
-        </div>
-        <div
-          className="training-end"
-          onClick={() => {
-            handleClickedElement("endDay");
-          }}
-          style={{
-            borderBottom: elements.endDay ? "2px solid #40b3a2" : null,
-          }}
-        >
-          Koniec dnia
         </div>
       </div>
       <div className="account-buttons">
